@@ -58,7 +58,7 @@ TODO: Finish this test by...
 
 
 # 1) Parameterizing the test for any edge cases
-@pytest.mark.parametrize("pet_id", [10, -1, 9999])
+@pytest.mark.parametrize("pet_id", [0, -1, 9999])
 def test_get_by_id_404(pet_id):
     test_endpoint = f"/pets/{pet_id}"
     response = api_helpers.get_api_data(test_endpoint)
